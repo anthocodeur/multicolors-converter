@@ -3,6 +3,7 @@
   "description": "A very simple tool to convert colors into differents formats",
   "type": "library",
   "license": "MIT",
+  "minimum-stability": "stable",
   "autoload": {
     "psr-4": {
       "ColorConverter\\": "src/"
@@ -19,7 +20,9 @@
       "email": "antho@anthowd.fr"
     }
   ],
-  "require": {},
+  "require": {
+    "php": ">=7.4"
+  },
   "require-dev": {
     "phpunit/phpunit": "^9.5"
   },
