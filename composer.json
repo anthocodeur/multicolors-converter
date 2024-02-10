@@ -1,0 +1,29 @@
+{
+  "name": "anthowd/multicolors-converter",
+  "description": "A very simple tool to convert colors into differents formats",
+  "type": "library",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "ColorConverter\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "ColorConverter\\Tests\\": "tests/"
+    }
+  },
+  "authors": [
+    {
+      "name": "anthowd",
+      "email": "antho@anthowd.fr"
+    }
+  ],
+  "require": {},
+  "require-dev": {
+    "phpunit/phpunit": "^9.5"
+  },
+  "scripts": {
+    "test": "phpunit tests/ColorConverterTest.php"
+  }
+}
