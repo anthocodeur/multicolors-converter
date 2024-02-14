@@ -19,9 +19,14 @@ class ColorConverter
         return $hex;
     }
 
+    private function loadRalToRgbMap()
+    {
+        return include __DIR__ . '/sources/ral_to_hex.php';
+    }
+
     private function ralToRgb($ral)
     {
-        $ralToRgbMap = include __DIR__ . '/sources/ral_to_hex.php';
+        $ralToRgbMap = $this->loadRalToRgbMap();
         foreach ($ralToRgbMap as $color) {
             if ($color['number'] === $ral) {
                 $rgb = self::hexToRgb($color['hex']);
@@ -45,7 +50,7 @@ class ColorConverter
 
     private function rgbToRal($r, $g, $b)
     {
-        $ralToRgbMap = include __DIR__ . '/sources/ral_to_hex.php';
+        $ralToRgbMap = $this->loadRalToRgbMap();
         $min_diff = INF;
         $closest_color = null;
 
