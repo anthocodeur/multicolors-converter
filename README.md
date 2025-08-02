@@ -6,7 +6,7 @@ ColorConverter is a modern PHP package that provides robust and precise conversi
 
 Install this package easily via Composer:
 
-```
+```shell
 composer require anthocodeur/multicolors-converter
 ```
 
@@ -16,7 +16,7 @@ You can use the static methods provided by the dedicated converter classes to co
 
 ### Convert Hexadecimal to RGB
 
-```
+```php
 use ColorConverter\HexConverter;
 
 $hex = '#FF0000';
@@ -26,7 +26,7 @@ print_r($rgb); // ['R' => 255, 'G' => 0, 'B' => 0]
 
 ### Convert RGB to Hexadecimal
 
-```
+```php
 use ColorConverter\RgbConverter;
 
 $r = 255;
@@ -38,7 +38,7 @@ echo $hex; // #ff0000
 
 ### Convert RGB to RAL
 
-```
+```php
 use ColorConverter\RalConverter;
 
 $r = 255;
@@ -50,7 +50,7 @@ echo $ral; // e.g., RAL1000
 
 ### Convert RAL to RGB
 
-```
+```php
 use ColorConverter\RalConverter;
 
 $ral = 'RAL1000';
@@ -65,7 +65,3 @@ Contributions are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for gui
 ## License
 
 This package is open-source software licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-```
-
-```
