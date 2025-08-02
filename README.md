@@ -1,67 +1,71 @@
 # Color Converter by anthowd
 
-ColorConverter is a package that allows you to convert hexadecimal values to RGB, RGB to RAL, and other combinations.
+ColorConverter is a modern PHP package that provides robust and precise conversions between various color formats, including Hexadecimal, RGB, and RAL color systems. Leveraging encapsulated converters (`HexConverter`, `RalConverter`, `RgbConverter`), it enables easy and precise manipulation of colors.
 
 ## Installation
 
-You can install this package via Composer. Run the following command:
+Install this package easily via Composer:
 
-```bash
+```
 composer require anthocodeur/multicolors-converter
 ```
 
 ## Usage
 
-To use this package, you can utilize the provided static methods to convert between different color formats. Here are some examples:
+You can use the static methods provided by the dedicated converter classes to convert colors between different formats.
 
 ### Convert Hexadecimal to RGB
 
-```php
-use ColorConverter\ColorConverter;
+```
+use ColorConverter\HexConverter;
 
 $hex = '#FF0000';
-$rgb = ColorConverter::hexToRgb($hex);
-print_r($rgb); // Output: ['R' => 255, 'G' => 0, 'B' => 0]
+$rgb = HexConverter::hexToRgb($hex);
+print_r($rgb); // ['R' => 255, 'G' => 0, 'B' => 0]
 ```
 
 ### Convert RGB to Hexadecimal
 
-```php
-use ColorConverter\ColorConverter;
+```
+use ColorConverter\RgbConverter;
 
 $r = 255;
 $g = 0;
 $b = 0;
-$hex = ColorConverter::rgbToHex($r, $g, $b);
-echo $hex; // Output: #ff0000
+$hex = RgbConverter::rgbToHex($r, $g, $b);
+echo $hex; // #ff0000
 ```
 
 ### Convert RGB to RAL
 
-```php
-use ColorConverter\ColorConverter;
+```
+use ColorConverter\RalConverter;
 
 $r = 255;
 $g = 0;
 $b = 0;
-$ral = ColorConverter::rgbToRalValue($r, $g, $b);
-echo $ral; // Output: RALXXXX (RAL color code)
+$ral = RalConverter::rgbToRalValue($r, $g, $b);
+echo $ral; // e.g., RAL1000
 ```
 
 ### Convert RAL to RGB
 
-```php
-use ColorConverter\ColorConverter;
+```
+use ColorConverter\RalConverter;
 
 $ral = 'RAL1000';
-$rgb = ColorConverter::ralToRgbMetas($ral);
-print_r($rgb); // Output: ['R' => 203, 'G' => 186, 'B' => 136]
+$rgb = RalConverter::ralToRgb($ral);
+print_r($rgb); // ['R' => 203, 'G' => 186, 'B' => 136]
 ```
 
 ## Contributing
 
-Contributions are welcome! Please read the [contributing guidelines](CONTRIBUTING.md) for details on how to contribute to this project.
+Contributions are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on how to contribute to this project.
 
 ## License
 
-This package is open-source software licensed under the MIT License
+This package is open-source software licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+```
+
+```
