@@ -3,6 +3,7 @@
   "description": "A very simple tool to convert colors into differents formats",
   "type": "library",
   "license": "MIT",
+  "version": "2.1.0",
   "minimum-stability": "stable",
   "autoload": {
     "psr-4": {
